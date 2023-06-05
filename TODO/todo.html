@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO App</title>
+    <link rel="stylesheet" href="todo.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>  
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-datepicker@1.9.0/dist/css/bootstrap-datepicker3.min.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-datepicker@1.9.0/dist/js/bootstrap-datepicker.min.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+  </head>
+
+  <body style="background-color: rgb(212, 215, 212)"> 
+    <div id = "main">
+      <p id="heading">TODO App</p>
+
+      <!-- Popup Form -->
+      <div id="box" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <span id="name">Add New Task</span>
+        <img src="assets/plus.png" id="plusicon"  width="18px" >
+      </div>
+      <p id="task">Tasks</p>
+     
+    </div>
+    </div>
+  
+    <form id="form-data">
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+
+            <!-- Header -->
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Add New Task</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <!-- Body -->
+            <div class="modal-body">
+
+              <label for="text" class="form-label ">Task Title</label>
+              <input type="text" class="form-control my-1" id="text"  name="text">
+              <div id="alert-message"></div>
+
+              <div class="form-group ">
+                <label for="text" class="my-2">Due Date</label>
+                <div class="input-group date ">
+                  <input type="date"  id="date" class="form-control my-1" aria-label="Text input with calendar icon">
+                </div>
+              </div>
+          
+              <label for="comment" class="form-label my-2">Description</label>
+              <textarea class="form-control my-1" rows="5" id="comment" name="text"></textarea>
+            </div>
+
+            <!-- Footer -->
+            <div class="modal-footer">
+              <button type="button" id="note-submit" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="submit"  id="submit" class="btn btn-primary" value="Add" >Add</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </body>
+  <script src="main.js"></script>
+</html>
